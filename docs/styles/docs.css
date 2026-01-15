@@ -5,37 +5,46 @@
     render.js
 
     Copyright (C) 2025 よね/Yone
-
     Licensed under the MIT License.
 
-    https://github.com/yone1130/render.js
+    https://github.com/yone1130/render-js
 
 */
 
 :root {
     --bgcolor: #101018;
-    --font-family: "Noto Sans JP", sans-serif;
+    --font-family: "Local Noto Sans JP", "Noto Sans JP", Arial, sans-serif;
     --font-size: 20px;
     --font-weight: 400;
     --font-style: normal;
     --line-height: 1.5em;
     --color: #e0e0e0;
-}
 
-* {
     margin: 0;
     padding: 0;
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
 }
 
 body {
+    margin: 0;
+
     min-height: 100dvh;
+    padding: 0;
     background-color: var(--bgcolor);
+
     font-family: var(--font-family);
     font-size: var(--font-size);
     font-weight: var(--font-weight);
     font-style: var(--font-style);
     line-height: var(--line-height);
     color: var(--color);
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .root {
@@ -143,10 +152,10 @@ body {
     padding: 1rem;
 
     transition: background-color 0.2s;
-}
 
-.navigation__tab:active {
-    background-color: #404040;
+    &:active {
+        background-color: #404040;
+    }
 }
 
 .navigation__body,
