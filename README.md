@@ -1,12 +1,12 @@
 # render.js
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yone1130/render.js)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yone1130/render-js)
 
-[> 日本語で読む](./README_JP.md)
+[日本語で読む >](./README_JP.md)
 
 ## Overview
 
-**render.js** is a library of rendering HTML elements for TypeScript and JavaScript.
+**render.js** is a library that rendering HTML elements for TypeScript and JavaScript.
 
 ## Usage
 
@@ -67,18 +67,19 @@ const render = new Render();
 const root = document.getElementById("root");
 
 function app() {
+    const { $div, $h1, $p } = render;
     const title = "render.js";
     const message = "Hello World";
 
     return [
-        render.$div({
+        $div({
             id: "app",
             children: [
-                render.$h1({
+                $h1({
                     id: "title",
                     textContent: title,
                 }),
-                render.$p({
+                $p({
                     id: "message",
                     textContent: message,
                 }),
@@ -124,4 +125,4 @@ Emitted JavaScript files will be output to the `dist/` directory.
 
 Licensed under the [MIT License](./LICENSE).
 
-Copyright &copy; 2025 よね/Yone
+Copyright © 2025 よね/Yone

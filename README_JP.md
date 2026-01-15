@@ -1,8 +1,8 @@
 # render.js
 
-[![DeepWiki に質問する](https://deepwiki.com/badge.svg)](https://deepwiki.com/yone1130/render.js)
+[![DeepWiki に質問する](https://deepwiki.com/badge.svg)](https://deepwiki.com/yone1130/render-js)
 
-[> Read in English](./README.md)
+[Read in English >](./README.md)
 
 ## Overview
 
@@ -67,18 +67,19 @@ const render = new Render();
 const root = document.getElementById("root");
 
 function app() {
+    const { $div, $h1, $p } = render;
     const title = "render.js";
     const message = "Hello World";
 
     return [
-        render.$div({
+        $div({
             id: "app",
             children: [
-                render.$h1({
+                $h1({
                     id: "title",
                     textContent: title,
                 }),
-                render.$p({
+                $p({
                     id: "message",
                     textContent: message,
                 }),
@@ -124,4 +125,4 @@ npm run build
 
 [MIT License](./LICENSE) のもとでライセンスされます。
 
-Copyright &copy; 2025 よね/Yone
+Copyright © 2025 よね/Yone
