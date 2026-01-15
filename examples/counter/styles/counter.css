@@ -5,10 +5,9 @@
     render.js
 
     Copyright (C) 2025 よね/Yone
-
     Licensed under the MIT License.
 
-    https://github.com/yone1130/render.js
+    https://github.com/yone1130/render-js
 
 */
 
@@ -81,7 +80,7 @@ render-app {
     border: none;
     border-radius: 100vw;
     padding: 1rem;
-    
+
     background-color: #eee;
     font-size: 1.3rem;
     font-weight: bold;
