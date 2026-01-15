@@ -5,16 +5,15 @@
     render.js
 
     Copyright (C) 2025 よね/Yone
-
     Licensed under the MIT License.
 
-    https://github.com/yone1130/render.js
+    https://github.com/yone1130/render-js
 
 */
 
 :root {
     --bgcolor: #101018;
-    --font-family: "Noto Sans JP", sans-serif;
+    --font-family: Arial, sans-serif;
     --font-size: 20px;
     --font-weight: 400;
     --font-style: normal;
