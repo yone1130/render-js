@@ -1,6 +1,6 @@
 {
     "name": "render.js",
-    "version": "1.0.0.beta",
+    "version": "1.0.0-dev",
     "description": "A library of rendering HTML elements for TypeScript and JavaScript.",
     "author": "よね/Yone",
     "license": "MIT",
@@ -18,11 +18,9 @@
         "start-docs": "http-server ./docs -p 3000",
         "start-test": "http-server ./ -p 3001"
     },
-    "dependencies": {
-        "typescript": "^5.8.2",
-        "version": "github:yone1130/version"
-    },
+    "dependencies": {},
     "devDependencies": {
+        "typescript": "^5.8.2",
         "http-server": "^14.1.1"
     },
     "type": "module",
