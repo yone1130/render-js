@@ -6,14 +6,26 @@
 
 ## Overview
 
-**Render.js** is a library that rendering HTML elements for TypeScript and JavaScript.
+**Render.js** is a TypeScript / JavaScript library for rendering HTML elements.
 
 ## Usage
 
+### 1. Install or Import
+
+Install as a package (TypeScript):
+```bash
+npm i yone1130/render-js
+```
+
+or direct importing from CDN (JavaScript):
+```js
+import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/render.js";
+```
+
+### 2. Use
+
 Example code (with App Creator):
 ```js
-import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scripts/render@1.0.0/render.js";
-
 class Greeting extends RenderComponent {
     constructor() {
         super();
@@ -61,8 +73,6 @@ render.runApp({
 
 or just rendering (with Builder):
 ```js
-import { Render } from "https://cdn.yoneyo.com/scripts/render@1.0.0/render.js";
-
 const render = new Render();
 const root = document.getElementById("root");
 
@@ -108,7 +118,7 @@ render.build({
 ### 1. Install Packages
 
 ```bash
-npm install
+pnpm i
 ```
 
 ### 2. Build
@@ -116,7 +126,7 @@ npm install
 Compile to JavaScript.
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 Emitted JavaScript files will be output to the `dist/` directory.
