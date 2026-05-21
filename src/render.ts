@@ -9,7 +9,7 @@
  * 
  */
 
-import { Version } from "version";
+import { Version, VersionLevel } from "@yoneyo/version";
 
 import { RenderArguments } from "./types/render-arguments.js";
 import { RunappArguments } from "./types/runapp-arguments.js";
@@ -22,7 +22,13 @@ import { RenderElements } from "./elements/elements.js";
 
 class Render {
     constructor() {
-        this.version = new Version(1, 0, 0, Version.levels.beta);
+        this.version = new Version({
+            major: 1,
+            minor: 0,
+            patch: 0,
+            level: VersionLevel.beta,
+            revision: 2,
+        });
     }
 
     version: Version;
