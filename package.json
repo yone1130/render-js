@@ -1,18 +1,24 @@
 {
-    "name": "render.js",
+    "name": "@yoneyo/render",
     "version": "1.0.0-dev",
-    "description": "A library of rendering HTML elements for TypeScript and JavaScript.",
-    "author": "よね/Yone",
+    "description": "A library for rendering HTML elements.",
+    "author": {
+        "name": "よね/Yon",
+        "email": "npm@yoneyo.com",
+        "url": "https://www.yoneyo.com/"
+    },
     "license": "MIT",
+    "packageManager": "pnpm@11.1.3",
+    "homepage": "https://render-js.yoneyo.com",
     "repository": {
         "type": "git",
-        "url": "https://github.com/yone1130/render.js.git"
+        "url": "https://github.com/yone1130/render-js.git"
     },
     "bugs": {
-        "url": "https://github.com/yone1130/render.js/issues"
+        "url": "https://github.com/yone1130/render-js/issues"
     },
-    "homepage": "https://render-js.yoneyo.com",
     "main": "./src/render.js",
+    "type": "module",
     "scripts": {
         "build": "tsc",
         "start-docs": "http-server ./docs -p 3000",
@@ -20,11 +26,7 @@
     },
     "dependencies": {},
     "devDependencies": {
-        "typescript": "^5.8.2",
+        "typescript": "^6.0.3",
         "http-server": "^14.1.1"
-    },
-    "type": "module",
-    "exports": {
-        "import": "./src/render.js"
     }
 }
