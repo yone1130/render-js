@@ -12,7 +12,7 @@
 
 Example code (with App Creator):
 ```js
-import { Render, RenderApp, RenderComponent } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
+import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scripts/render@1.0.0/render.js";
 
 class Greeting extends RenderComponent {
     constructor() {
@@ -61,7 +61,7 @@ render.runApp({
 
 or just rendering (with Builder):
 ```js
-import { Render } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
+import { Render } from "https://cdn.yoneyo.com/scripts/render@1.0.0/render.js";
 
 const render = new Render();
 const root = document.getElementById("root");
