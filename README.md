@@ -1,4 +1,4 @@
-# render.js
+# Render.js
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yone1130/render-js)
 
@@ -6,7 +6,7 @@
 
 ## Overview
 
-**render.js** is a library that rendering HTML elements for TypeScript and JavaScript.
+**Render.js** is a library that rendering HTML elements for TypeScript and JavaScript.
 
 ## Usage
 
@@ -17,7 +17,7 @@ import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scrip
 class Greeting extends RenderComponent {
     constructor() {
         super();
-        this.title = "render.js";
+        this.title = "Render.js";
         this.message = "Hello World";
     }
 
@@ -68,7 +68,7 @@ const root = document.getElementById("root");
 
 function app() {
     const { $div, $h1, $p } = render;
-    const title = "render.js";
+    const title = "Render.js";
     const message = "Hello World";
 
     return [

@@ -1,4 +1,4 @@
-# render.js
+# Render.js
 
 [![DeepWiki に質問する](https://deepwiki.com/badge.svg)](https://deepwiki.com/yone1130/render-js)
 
@@ -6,7 +6,7 @@
 
 ## Overview
 
-**render.js** は、TypeScript と JavaScript で利用できるHTMLレンダリングライブラリです。
+**Render.js** は、TypeScript と JavaScript で利用できるHTMLレンダリングライブラリです。
 
 ## 利用方法
 
@@ -17,7 +17,7 @@ import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scrip
 class Greeting extends RenderComponent {
     constructor() {
         super();
-        this.title = "render.js";
+        this.title = "Render.js";
         this.message = "Hello World";
     }
 
@@ -68,7 +68,7 @@ const root = document.getElementById("root");
 
 function app() {
     const { $div, $h1, $p } = render;
-    const title = "render.js";
+    const title = "Render.js";
     const message = "Hello World";
 
     return [
