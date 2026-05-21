@@ -4,13 +4,27 @@
 
 [Read in English >](./README.md)
 
-## Overview
+## 概要
 
-**Render.js** は、TypeScript と JavaScript で利用できるHTMLレンダリングライブラリです。
+**Render.js** は、TypeScript / JavaScript 用のHTMLレンダリングライブラリです。
 
 ## 利用方法
 
-コード例 (App Creator):
+### 1. インストールまたはインポート
+
+パッケージとしてインストール (TypeScript):
+```bash
+npm i yone1130/render-js
+```
+
+またはCDNから直接インポート (JavaScript):
+```js
+import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/render.js";
+```
+
+### 2. 使う
+
+サンプルコード (App Creator):
 ```js
 import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scripts/render@1.0.0/render.js";
 
@@ -108,7 +122,7 @@ render.build({
 ### 1. パッケージをインストールする
 
 ```bash
-npm install
+pnpm i
 ```
 
 ### 2. ビルド
@@ -116,7 +130,7 @@ npm install
 JavaScript にコンパイルします。
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 コンパイルされたJavaScriptファイルが `dist/` ディレクトリに出力されます。
