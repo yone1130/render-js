@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@yoneyo/version':
+        specifier: github:yone1130/version-js
+        version: https://codeload.github.com/yone1130/version-js/tar.gz/a63542245622adda6cddec662199e0c5e494815d
     devDependencies:
       http-server:
         specifier: ^14.1.1
@@ -16,6 +20,10 @@ importers:
         version: 6.0.3
 
 packages:
+
+  '@yoneyo/version@https://codeload.github.com/yone1130/version-js/tar.gz/a63542245622adda6cddec662199e0c5e494815d':
+    resolution: {gitHosted: true, tarball: https://codeload.github.com/yone1130/version-js/tar.gz/a63542245622adda6cddec662199e0c5e494815d}
+    version: 1.3.0
 
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
@@ -217,6 +225,8 @@ packages:
     deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
 snapshots:
+
+  '@yoneyo/version@https://codeload.github.com/yone1130/version-js/tar.gz/a63542245622adda6cddec662199e0c5e494815d': {}
 
   ansi-styles@4.3.0:
     dependencies:
