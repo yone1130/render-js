@@ -19,7 +19,7 @@ npm i yone1130/render-js
 
 or direct importing from CDN (JavaScript):
 ```js
-import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/render.js";
+import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/render.js";
 ```
 
 ### 2. Use
