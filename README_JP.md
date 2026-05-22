@@ -19,15 +19,13 @@ npm i yone1130/render-js
 
 またはCDNから直接インポート (JavaScript):
 ```js
-import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/render.js";
+import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/render.js";
 ```
 
 ### 2. 使う
 
 サンプルコード (App Creator):
 ```js
-import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scripts/render@1.0.0/render.js";
-
 class Greeting extends RenderComponent {
     constructor() {
         super();
@@ -75,8 +73,6 @@ render.runApp({
 
 またはレンダリングのみ (Builder):
 ```js
-import { Render } from "https://cdn.yoneyo.com/scripts/render@1.0.0/render.js";
-
 const render = new Render();
 const root = document.getElementById("root");
 
