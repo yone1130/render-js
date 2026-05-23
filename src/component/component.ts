@@ -9,8 +9,8 @@
  * 
  */
 
-import { Render, RenderElement } from "../render.js";
 import { RenderComponentInterface } from "./component.interface.js";
+import { Render, RenderElement } from "../render.js";
 
 export abstract class RenderComponent implements RenderComponentInterface {
     constructor({

@@ -9,8 +9,8 @@
  * 
  */
 
-import { RenderComponent } from "../component/component.js";
 import { Render } from "../render.js";
+import { RenderComponent } from "../component/component.js";
 
 export interface RenderAppInterface {
     id: string | null;
