@@ -9,20 +9,7 @@
  * 
  */
 
-/**
- * @abstract
- */
 export class Interval {
-    /**
-     * @param {{ value: * }}
-     */
-    constructor({ interval }) {
-        this.#interval = interval;
-    }
-
-    /**
-     * @returns {*}
-     */
     get interval() {
         return this.#interval;
     }
@@ -32,14 +19,36 @@ export class Interval {
         this.#listeners.forEach(async (listener) => await listener());
     }
 
+    /**
+     * @type {NodeJS.Timeout}
+     */
+    #interval = null;
+
+    /**
+     * @type {Array<() => unknown)>}
+     */
+    #listeners = [];
+
+    /**
+     * @param {{ interval: NodeJS.Timeout }}
+     */
+    constructor({ interval }) {
+        this.#interval = interval;
+    }
+
+    /**
+     * @param {() => unknown}
+     * @returns {void}
+     */
     addListener({ callback }) {
         this.#listeners.push(callback);
     }
 
+    /**
+     * @param {() => unknown}
+     * @returns {void}
+     */
     removeListener({ callback }) {
         this.#listeners.splice(this.#listeners.indexOf(callback), 1);
     }
-
-    #interval = null;
-    #listeners = [];
 }

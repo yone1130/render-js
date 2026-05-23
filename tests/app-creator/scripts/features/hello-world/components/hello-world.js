@@ -12,10 +12,6 @@
 import { RenderComponent } from '../../../../../../dist/render.js';
 
 export class HelloWorld extends RenderComponent {
-    constructor() {
-        super();
-    }
-
     get count() {
         return this.#count;
     }
@@ -25,6 +21,18 @@ export class HelloWorld extends RenderComponent {
         this.rendering();
     }
 
+    /**
+     * @type {number}
+     */
+    #count = 0;
+
+    constructor() {
+        super();
+    }
+
+    /**
+     * @returns {Array<HTMLElement>}
+     */
     build({ ref }) {
         const { $p, $span, $button } = this.render;
 
@@ -46,7 +54,4 @@ export class HelloWorld extends RenderComponent {
             ],
         });
     }
-
-    #count = 0;
 }
-
