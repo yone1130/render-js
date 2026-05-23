@@ -11,9 +11,9 @@
 
 import { RenderComponent } from "../component/component.js";
 import { Render, RenderElement } from "../render.js";
-import { RenderAppModel } from "./app.model.js";
+import { RenderAppInterface } from "./app.interface.js";
 
-export abstract class RenderApp implements RenderAppModel {
+export abstract class RenderApp implements RenderAppInterface {
     constructor({
         id,
     }: {
