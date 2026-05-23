@@ -11,7 +11,7 @@
 
 import { Render } from "https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/render.js";
 
-function app({ title, message }) {
+const app = ({ title, message }) => {
     const { $div, $h1, $p } = render;
 
     return [
