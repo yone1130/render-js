@@ -19,7 +19,7 @@ export class RenderElement {
         this.options = options;
     }
 
-    _create(tagName: keyof HTMLElementTagNameMap): HTMLElement {
+    create(tagName: keyof HTMLElementTagNameMap): HTMLElement {
         this.element = document.createElement(tagName);
 
         if (typeof this.options.innerHTML === "string") {
@@ -71,7 +71,7 @@ export class RenderElement {
         return this.element;
     }
 
-    _createCustomElement(tagName: string): HTMLElement {
+    createCustomElement(tagName: string): HTMLElement {
         this.element = document.createElement(tagName);
 
         if (typeof this.options.id === "string") {

@@ -73,7 +73,7 @@ export abstract class RenderComponent implements RenderComponentInterface {
         this.element = new RenderElement({
             id: this.id,
             children: builtChildren,
-        })._createCustomElement("render-component")
+        }).createCustomElement("render-component")
 
         return [
             this.element,
