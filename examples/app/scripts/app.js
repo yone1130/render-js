@@ -29,7 +29,7 @@ class Greeting extends RenderComponent {
         const { $h1, $p } = this.render;
 
         return super.build({
-            ref: ref,
+            ref,
             children: [
                 $h1({
                     id: "title",
@@ -39,7 +39,7 @@ class Greeting extends RenderComponent {
                     id: "message",
                     textContent: this.#message,
                 }),
-            ]
+            ],
         });
     }
 
@@ -68,7 +68,7 @@ class MyApp extends RenderApp {
             ref: ref,
             children: [
                 new Greeting(),
-            ]
+            ],
         });
     }
 }

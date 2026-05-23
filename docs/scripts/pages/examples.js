@@ -40,7 +40,7 @@ class Navigation {
             children: [
                 this._router(),
                 this._body(),
-            ]
+            ],
         });
     }
 
@@ -67,7 +67,7 @@ class Navigation {
         return render.$div({
             className: "navigation__router",
             children: tabs,
-        })
+        });
     }
 
 

@@ -43,6 +43,6 @@ export abstract class RenderApp implements RenderAppInterface {
                 id: this.id,
                 children: builtChildren,
             }).createCustomElement("render-app"),
-        ]
+        ];
     };
 }

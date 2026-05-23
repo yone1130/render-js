@@ -29,7 +29,7 @@ export class HelloWorld extends RenderComponent {
         const { $p, $span, $button } = this.render;
 
         return super.build({
-            ref: ref,
+            ref,
             children: [
                 $p({
                     children: [

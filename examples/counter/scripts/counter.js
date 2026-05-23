@@ -31,7 +31,7 @@ class CounterPage extends RenderComponent {
         const { $div, $p, $button } = this.render;
 
         return super.build({
-            ref: ref,
+            ref,
             children: [
                 $p({
                     className: "result",
@@ -77,7 +77,7 @@ class CounterApp extends RenderApp {
             ref: ref,
             children: [
                 new CounterPage(),
-            ]
+            ],
         });
     }
 }

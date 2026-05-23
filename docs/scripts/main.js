@@ -60,7 +60,7 @@ function top() {
                             className: "about",
                             textContent: "Welcome to render.js Documents!\nreder.js is a library of rendering HTML elements for JavaScript.",
                         }),
-                    ]
+                    ],
                 }),
                 $section({
                     className: "section",
@@ -71,7 +71,7 @@ function top() {
                             textContent: "View Demos →",
                             onClick: (event) => onClickLink(event),
                         }),
-                    ]
+                    ],
                 }),
             ],
         }),
@@ -99,7 +99,7 @@ function notFound() {
                             className: "description",
                             textContent: "The requested page was not found.",
                         }),
-                    ]
+                    ],
                 }),
                 $section({
                     className: "section",

@@ -7,7 +7,6 @@
     // "livePreview.serverRoot": "/docs/",
     // "liveServer.settings.root": "/docs/",
     "liveServer.settings.file": "/",
-
     /*
         [tests]
         When you run `/tests/`, you can use these settings.
