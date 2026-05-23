@@ -20,5 +20,4 @@ export interface ElementOptions {
     onClick?: (this: HTMLElement, ev: MouseEvent) => void;
     textContent?: string;
     children?: Array<HTMLElement>;
-    innerHTML?: string;
 }

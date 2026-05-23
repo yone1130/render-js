@@ -22,12 +22,6 @@ export class RenderElement {
     create(tagName: keyof HTMLElementTagNameMap): HTMLElement {
         this.element = document.createElement(tagName);
 
-        if (typeof this.options.innerHTML === "string") {
-            const html = document.createRange().createContextualFragment(this.options.innerHTML);
-            this.element.appendChild(html);
-            return this.element;
-        }
-
         if (typeof this.options.id === "string") {
             this.element.id = this.options.id;
         }
