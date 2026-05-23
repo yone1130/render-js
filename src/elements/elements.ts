@@ -18,7 +18,7 @@ class A extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("a");
+        return super.create("a");
     }
 }
 
@@ -28,7 +28,7 @@ class Article extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("article");
+        return super.create("article");
     }
 }
 
@@ -38,7 +38,7 @@ class Aside extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("aside");
+        return super.create("aside");
     }
 }
 
@@ -48,7 +48,7 @@ class Base extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("base");
+        return super.create("base");
     }
 }
 
@@ -58,7 +58,7 @@ class Body extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("body");
+        return super.create("body");
     }
 }
 
@@ -68,7 +68,7 @@ class Button extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("button");
+        return super.create("button");
     }
 }
 
@@ -78,7 +78,7 @@ class Code extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("code");
+        return super.create("code");
     }
 }
 
@@ -88,7 +88,7 @@ class Dialog extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("dialog");
+        return super.create("dialog");
     }
 }
 
@@ -98,7 +98,7 @@ class Div extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("div");
+        return super.create("div");
     }
 }
 
@@ -108,7 +108,7 @@ class Footer extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("footer");
+        return super.create("footer");
     }
 }
 
@@ -118,7 +118,7 @@ class Form extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("form");
+        return super.create("form");
     }
 }
 
@@ -128,7 +128,7 @@ class H1 extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("h1");
+        return super.create("h1");
     }
 }
 
@@ -138,7 +138,7 @@ class H2 extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("h2");
+        return super.create("h2");
     }
 }
 
@@ -148,7 +148,7 @@ class H3 extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("h3");
+        return super.create("h3");
     }
 }
 
@@ -158,7 +158,7 @@ class H4 extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("h4");
+        return super.create("h4");
     }
 }
 
@@ -168,7 +168,7 @@ class H5 extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("h5");
+        return super.create("h5");
     }
 }
 
@@ -178,7 +178,7 @@ class H6 extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("h6");
+        return super.create("h6");
     }
 }
 
@@ -188,7 +188,7 @@ class Head extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("head");
+        return super.create("head");
     }
 }
 
@@ -198,7 +198,7 @@ class Header extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("header");
+        return super.create("header");
     }
 }
 
@@ -208,7 +208,7 @@ class Html extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("html");
+        return super.create("html");
     }
 }
 
@@ -218,7 +218,7 @@ class Image extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("img");
+        return super.create("img");
     }
 }
 
@@ -228,7 +228,7 @@ class Li extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("li");
+        return super.create("li");
     }
 }
 
@@ -238,7 +238,7 @@ class Link extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("link");
+        return super.create("link");
     }
 }
 
@@ -248,7 +248,7 @@ class Main extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("main");
+        return super.create("main");
     }
 }
 
@@ -258,7 +258,7 @@ class Meta extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("meta");
+        return super.create("meta");
     }
 }
 
@@ -268,7 +268,7 @@ class Nav extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("nav");
+        return super.create("nav");
     }
 }
 
@@ -278,7 +278,7 @@ class Ol extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("ol");
+        return super.create("ol");
     }
 }
 
@@ -288,7 +288,7 @@ class P extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("p");
+        return super.create("p");
     }
 }
 
@@ -298,7 +298,7 @@ class Script extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("script");
+        return super.create("script");
     }
 }
 
@@ -308,7 +308,7 @@ class Search extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("search");
+        return super.create("search");
     }
 }
 
@@ -318,7 +318,7 @@ class Section extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("section");
+        return super.create("section");
     }
 }
 
@@ -328,7 +328,7 @@ class Span extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("span");
+        return super.create("span");
     }
 }
 
@@ -338,7 +338,7 @@ class Strong extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("strong");
+        return super.create("strong");
     }
 }
 
@@ -348,7 +348,7 @@ class Style extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("style");
+        return super.create("style");
     }
 }
 
@@ -358,7 +358,7 @@ class Title extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("title");
+        return super.create("title");
     }
 }
 
@@ -368,7 +368,7 @@ class Ul extends RenderElement {
     }
 
     create(): HTMLElement {
-        return this._create("ul");
+        return super.create("ul");
     }
 }
 
