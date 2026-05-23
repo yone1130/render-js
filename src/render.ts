@@ -189,4 +189,4 @@ class Render {
     }
 }
 
-export { Render, RenderApp, RenderComponent, RenderElement, RenderElements }
+export { Render, RenderApp, RenderComponent, RenderElement, RenderElements };

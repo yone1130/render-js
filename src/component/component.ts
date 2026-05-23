@@ -59,7 +59,7 @@ export abstract class RenderComponent implements RenderComponentInterface {
             }
 
             if (child instanceof RenderComponent) {
-                builtChildren.push(...child.build({ children: [], ref: ref }));
+                builtChildren.push(...child.build({ children: [], ref }));
                 return;
             }
 
@@ -73,7 +73,7 @@ export abstract class RenderComponent implements RenderComponentInterface {
         this.element = new RenderElement({
             id: this.id,
             children: builtChildren,
-        }).createCustomElement("render-component")
+        }).createCustomElement("render-component");
 
         return [
             this.element,

@@ -21,7 +21,7 @@ export class App extends RenderApp {
         return super.build({
             children: [
                 new HelloWorld(),
-            ]
+            ],
         });
     }
 }

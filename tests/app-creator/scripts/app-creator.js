@@ -26,7 +26,7 @@ class TestAppCreator {
         this.render.runApp({
             root: this.root,
             app: new App(),
-        })
+        });
     }
 
     async #importRender() {
