@@ -24,7 +24,6 @@ allButton.addEventListener("click", () => {
     build();
 })
 
-
 loopButton.addEventListener("click", () => {
     if (renderingInterval.interval === null) {
         loopButton.textContent = "Stop the Loop";
@@ -38,7 +37,9 @@ loopButton.addEventListener("click", () => {
     buildLoop();
 })
 
-
+/**
+ * @returns {unknown}
+ */
 async function importRender() {
     try {
         return await import('../../../dist/render.js');
@@ -47,12 +48,17 @@ async function importRender() {
     }
 }
 
-
+/**
+ * @returns {void}
+ */
 function onFailedImportRender(error) {
     root.textContent = "Error: Failed to import the render.js package. Please build the project first.";
     throw new Error(`Error: Failed to import the render.js package. Please build the project first.: ${error}`);
 }
 
+/**
+ * @returns {void}
+ */
 function build() {
     render.build({
         target: root,
@@ -60,7 +66,9 @@ function build() {
     });
 }
 
-
+/**
+ * @returns {Array<HTMLElement>}
+ */
 function buildLoop() {
     build();
 
@@ -72,7 +80,9 @@ function buildLoop() {
     }, 200);
 }
 
-
+/**
+ * @returns {Array<HTMLElement>}
+ */
 function component() {
     return render.$div({
         id: "app",

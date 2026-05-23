@@ -11,6 +11,10 @@
 
 import { Render } from "https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/render.js";
 
+/**
+ * @param {{ title: string, message: string }}
+ * @returns {Array<HTMLElement>}
+ */
 const app = ({ title, message }) => {
     const { $div, $h1, $p } = render;
 
@@ -32,6 +36,9 @@ const app = ({ title, message }) => {
     ];
 };
 
+/**
+ * @type {Render}
+ */
 const render = new Render();
 
 render.build({

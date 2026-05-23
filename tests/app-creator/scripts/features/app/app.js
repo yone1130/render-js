@@ -17,6 +17,9 @@ export class App extends RenderApp {
         super();
     }
 
+    /**
+     * @returns {Array<HTMLElement>}
+     */
     build() {
         return super.build({
             children: [

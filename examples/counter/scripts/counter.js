@@ -12,21 +12,36 @@
 import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/render.js";
 
 class CounterPage extends RenderComponent {
+    /**
+     * @type {number}
+     */
+    get count() {
+        return this.#count;
+    }
+
+    /**
+     * @type {number}
+     */
+    set count(newCount) {
+        this.#count = newCount;
+        this.rendering();
+    }
+
+    /**
+     * @type {number}
+     */
+    #count = 0;
+
     constructor() {
         super({
             id: "counter",
         });
     }
 
-    get count() {
-        return this.#count;
-    }
-
-    set count(newCount) {
-        this.#count = newCount;
-        this.rendering();
-    }
-
+    /**
+     * @param {{ ref: unknown }}
+     * @returns {Array<HTMLElement>}
+     */
     build({ ref }) {
         const { $div, $p, $button } = this.render;
 
@@ -56,12 +71,16 @@ class CounterPage extends RenderComponent {
         });
     }
 
-    #count = 0;
-
+    /**
+     * @returns {void}
+     */
     #incrementCount() {
         this.count++;
     }
 
+    /**
+     * @returns {void}
+     */
     #decrementCount() {
         this.count--;
     }
@@ -72,6 +91,10 @@ class CounterApp extends RenderApp {
         super();
     }
 
+    /**
+     * @param {{ ref: unknown }}
+     * @returns {Array<HTMLElement>}
+     */
     build({ ref }) {
         return super.build({
             ref: ref,
@@ -82,6 +105,9 @@ class CounterApp extends RenderApp {
     }
 }
 
+/**
+ * @type {Render}
+ */
 const render = new Render();
 
 render.runApp({

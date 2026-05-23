@@ -12,6 +12,16 @@
 import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/render.js";
 
 class Greeting extends RenderComponent {
+    /**
+     * @type {string}
+     */
+    #title;
+
+    /**
+     * @type {string}
+     */
+    #message;
+
     constructor() {
         super({
             id: "greeting",
@@ -22,8 +32,8 @@ class Greeting extends RenderComponent {
     }
 
     /**
-     * @param {{ ref: * }}
-     * @returns {HTMLElement[]}
+     * @param {{ ref: unknown }}
+     * @returns {Array<HTMLElement>}
      */
     build({ ref }) {
         const { $h1, $p } = this.render;
@@ -42,16 +52,6 @@ class Greeting extends RenderComponent {
             ],
         });
     }
-
-    /**
-     * @type {string}
-     */
-    #title;
-
-    /**
-     * @type {string}
-     */
-    #message;
 }
 
 class MyApp extends RenderApp {
@@ -60,8 +60,8 @@ class MyApp extends RenderApp {
     }
 
     /**
-     * @param {{ ref: * }}
-     * @returns {HTMLElement[]}
+     * @param {{ ref: unknown }}
+     * @returns {Array<HTMLElement>}
      */
     build({ ref }) {
         return super.build({
