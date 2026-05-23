@@ -76,7 +76,7 @@ render.runApp({
 const render = new Render();
 const root = document.getElementById("root");
 
-function app() {
+const app = () => {
     const { $div, $h1, $p } = render;
     const title = "Render.js";
     const message = "Hello World";
