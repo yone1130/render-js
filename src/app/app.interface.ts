@@ -9,11 +9,11 @@
  * 
  */
 
+import { RenderComponent } from "../component/component.js";
 import { Render } from "../render.js";
 
-export interface RenderComponentModel {
+export interface RenderAppInterface {
     id: string | null;
     render: Render;
-    rendering(): void;
-    build({ children, ref }: { children: Array<HTMLElement>, ref?: { nowrapper?: boolean } }): Array<HTMLElement>;
+    build({ children }: { children: Array<HTMLElement | RenderComponent> }): Array<HTMLElement>;
 }
