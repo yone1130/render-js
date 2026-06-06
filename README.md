@@ -1,23 +1,35 @@
-# render.js
+# Render.js
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yone1130/render.js)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yone1130/render-js)
 
-[> 日本語で読む](./README_JP.md)
+[日本語で読む >](./README_JP.md)
 
 ## Overview
 
-**render.js** is a library of rendering HTML elements for TypeScript and JavaScript.
+**Render.js** is a TypeScript / JavaScript library for rendering HTML elements.
 
 ## Usage
 
+### 1. Install or Import
+
+Install as a package (TypeScript):
+```bash
+npm i yone1130/render-js
+```
+
+or direct importing from CDN (JavaScript):
+```js
+import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/render.js";
+```
+
+### 2. Use
+
 Example code (with App Creator):
 ```js
-import { Render, RenderApp, RenderComponent } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
-
 class Greeting extends RenderComponent {
     constructor() {
         super();
-        this.title = "render.js";
+        this.title = "Render.js";
         this.message = "Hello World";
     }
 
@@ -61,24 +73,23 @@ render.runApp({
 
 or just rendering (with Builder):
 ```js
-import { Render } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
-
 const render = new Render();
 const root = document.getElementById("root");
 
-function app() {
-    const title = "render.js";
+const app = () => {
+    const { $div, $h1, $p } = render;
+    const title = "Render.js";
     const message = "Hello World";
 
     return [
-        render.$div({
+        $div({
             id: "app",
             children: [
-                render.$h1({
+                $h1({
                     id: "title",
                     textContent: title,
                 }),
-                render.$p({
+                $p({
                     id: "message",
                     textContent: message,
                 }),
@@ -107,7 +118,7 @@ render.build({
 ### 1. Install Packages
 
 ```bash
-npm install
+pnpm i
 ```
 
 ### 2. Build
@@ -115,7 +126,7 @@ npm install
 Compile to JavaScript.
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 Emitted JavaScript files will be output to the `dist/` directory.
@@ -124,4 +135,4 @@ Emitted JavaScript files will be output to the `dist/` directory.
 
 Licensed under the [MIT License](./LICENSE).
 
-Copyright &copy; 2025 よね/Yone
+Copyright © 2025 よね/Yone

@@ -1,26 +1,29 @@
-/**!
+/*!
  * 
- * render.js
+ * Render.js
  * 
  * Copyright (C) 2025 よね/Yone
- * 
  * Licensed under the MIT License.
  * 
- * https://github.com/yone1130/render.js
+ * https://github.com/yone1130/render-js
  * 
  */
 
-import { RenderComponent } from "../component/component.js";
+import { RenderAppInterface } from "./app.interface.js";
 import { Render, RenderElement } from "../render.js";
-import { RenderAppModel } from "./app.model.js";
+import { RenderComponent } from "../component/component.js";
 
-export abstract class RenderApp implements RenderAppModel {
-    constructor(id: string) {
-        this.id = id;
+export abstract class RenderApp implements RenderAppInterface {
+    constructor({
+        id,
+    }: {
+        id?: string | null;
+    } = {}) {
+        this.id = id ?? null;
         this.render = new Render();
     }
 
-    id: string;
+    id: string | null;
     render: Render;
 
     build({ children }: { children: Array<HTMLElement | RenderComponent> }): Array<HTMLElement> {
@@ -39,7 +42,7 @@ export abstract class RenderApp implements RenderAppModel {
             new RenderElement({
                 id: this.id,
                 children: builtChildren,
-            })._createCustomElement("render-app"),
-        ]
+            }).createCustomElement("render-app"),
+        ];
     };
 }

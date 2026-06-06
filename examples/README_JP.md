@@ -2,17 +2,18 @@
 
 ## このディレクトリについて
 
-**render.js** のサンプルコードです。
+**Render.js** のサンプルコードです。
 
 ## ウェブデモを見る
 
 ウェブ上で簡単にデモを利用できます:
 https://render-js.yoneyo.com/examples/
 
-## ファイル
+## ディレクトリ
 
-| ファイル | 説明 |
-|-------|--------|
-| hello-world.js | `Hello World` を表示。 |
+| 名前 | 説明 |
+| - | - |
+| hello-world.js | `Hello World` を表示 |
 | counter.js | カウンターの実装 |
+| app | App Creator の実装 |
 <!-- | navigate.js | ナビゲーション (画面推移) の実装。 | -->

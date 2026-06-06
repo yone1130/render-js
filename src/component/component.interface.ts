@@ -1,0 +1,19 @@
+/*!
+ * 
+ * Render.js
+ * 
+ * Copyright (C) 2025 よね/Yone
+ * Licensed under the MIT License.
+ * 
+ * https://github.com/yone1130/render-js
+ * 
+ */
+
+import { Render } from "../render.js";
+
+export interface RenderComponentInterface {
+    id: string | null;
+    render: Render;
+    rendering(): void;
+    build({ children, ref }: { children: Array<HTMLElement>, ref?: { nowrapper?: boolean } }): Array<HTMLElement>;
+}

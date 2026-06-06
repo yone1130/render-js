@@ -1,17 +1,15 @@
-/**!
+/*!
  * 
- * render.js
+ * Render.js
  * 
  * Copyright (C) 2025 よね/Yone
- * 
  * Licensed under the MIT License.
  * 
- * https://github.com/yone1130/render.js
+ * https://github.com/yone1130/render-js
  * 
  */
 
-import { Render } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
-
+import { Render } from "https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/render.js";
 
 const render = new Render();
 const root = document.getElementById("root");
@@ -22,8 +20,6 @@ render.build({
     target: root,
     children: await page(),
 });
-
-/* ---------------- */
 
 async function page() {
     const locationUrl = new URL(location.href);
@@ -42,72 +38,73 @@ async function page() {
     }
 }
 
-
 function top() {
-    let title = "render.js";
+    const { $div, $section, $h1, $p, $a } = render;
+    let title = "Render.js";
 
     return [
-        render.$div({
+        $div({
             id: "page",
             className: "page",
             children: [
-                render.$section({
+                $section({
                     className: "section",
                     children: [
-                        render.$h1({
+                        $h1({
                             id: "title",
                             className: "title section__title",
                             textContent: title,
                         }),
-                        render.$p({
+                        $p({
                             id: "about",
                             className: "about",
-                            textContent: "Welcome to render.js Documents!\nreder.js is a library of rendering HTML elements for JavaScript.",
+                            textContent: "Welcome to Render.js Documents!\nRender.js is a library of rendering HTML elements for JavaScript.",
                         }),
-                    ]
+                    ],
                 }),
-                render.$section({
+                $section({
                     className: "section",
                     children: [
-                        render.$a({
+                        $a({
                             className: "description",
                             href: "/examples/",
                             textContent: "View Demos →",
                             onClick: (event) => onClickLink(event),
                         }),
-                    ]
+                    ],
                 }),
             ],
         }),
     ];
 }
 
-
 function notFound() {
+    const { $div, $section, $h1, $p, $a } = render;
+
     return [
-        render.$div({
+        $div({
             id: "page",
             className: "page",
             children: [
-                render.$section({
+                $section({
                     className: "section",
                     children: [
-                        render.$h1({
+                        $h1({
                             id: "title",
                             className: "title section__title",
                             textContent: "Not Found",
                         }),
-                        render.$p({
+                        $p({
                             id: "description",
                             className: "description",
                             textContent: "The requested page was not found.",
                         }),
-                    ]
+                    ],
                 }),
-                render.$section({
+                $section({
                     className: "section",
                     children: [
-                        render.$a({
+                        $a({
                             href: "/",
                             textContent: "Back to Top",
                             onClick: (event) => onClickLink(event),
@@ -118,7 +115,6 @@ function notFound() {
         }),
     ];
 }
-
 
 async function examples() {
     if (!("examples" in pages)) {
@@ -131,12 +127,13 @@ async function examples() {
     }
 }
 
-/* ---------------- */
-
 async function onClickLink(event) {
-    const targetPathname = event.target.pathname;
     event.preventDefault();
+
+    const targetPathname = event.target.pathname;
+
     history.pushState(null, '', targetPathname);
+
     render.build({
         target: root,
         children: await page(),

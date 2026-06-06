@@ -1,51 +1,376 @@
-/**!
+/*!
  * 
- * render.js
+ * Render.js
  * 
  * Copyright (C) 2025 よね/Yone
- * 
  * Licensed under the MIT License.
  * 
- * https://github.com/yone1130/render.js
+ * https://github.com/yone1130/render-js
  * 
  */
 
-import { A } from "./a.js";
-import { Article } from "./article.js";
-import { Aside } from "./aside.js";
-import { Base } from "./base.js";
-import { Body } from "./body.js";
-import { Button } from "./button.js";
-import { Code } from "./code.js";
-import { Dialog } from "./dialog.js";
-import { Div } from "./div.js";
-import { Footer } from "./footer.js";
-import { Form } from "./form.js";
-import { H1 } from "./h1.js";
-import { H2 } from "./h2.js";
-import { H3 } from "./h3.js";
-import { H4 } from "./h4.js";
-import { H5 } from "./h5.js";
-import { H6 } from "./h6.js";
-import { Head } from "./head.js";
-import { Header } from "./header.js";
-import { Html } from "./html.js";
-import { Image } from "./image.js";
-import { Li } from "./li.js";
-import { Link } from "./link.js";
-import { Main } from "./main.js";
-import { Meta } from "./meta.js";
-import { Nav } from "./nav.js";
-import { Ol } from "./ol.js";
-import { P } from "./p.js";
-import { Script } from "./script.js";
-import { Search } from "./search.js";
-import { Section } from "./section.js";
-import { Span } from "./span.js";
-import { Strong } from "./strong.js";
-import { Style } from "./style.js";
-import { Title } from "./title.js";
-import { Ul } from "./ul.js";
+import { RenderElement } from "./element.js";
+import { ElementOptions } from "../types/element-options.js";
+
+class A extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("a");
+    }
+}
+
+class Article extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("article");
+    }
+}
+
+class Aside extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("aside");
+    }
+}
+
+class Base extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("base");
+    }
+}
+
+class Body extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("body");
+    }
+}
+
+class Button extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("button");
+    }
+}
+
+class Code extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("code");
+    }
+}
+
+class Dialog extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("dialog");
+    }
+}
+
+class Div extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("div");
+    }
+}
+
+class Footer extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("footer");
+    }
+}
+
+class Form extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("form");
+    }
+}
+
+class H1 extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("h1");
+    }
+}
+
+class H2 extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("h2");
+    }
+}
+
+class H3 extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("h3");
+    }
+}
+
+class H4 extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("h4");
+    }
+}
+
+class H5 extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("h5");
+    }
+}
+
+class H6 extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("h6");
+    }
+}
+
+class Head extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("head");
+    }
+}
+
+class Header extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("header");
+    }
+}
+
+class Html extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("html");
+    }
+}
+
+class Image extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("img");
+    }
+}
+
+class Li extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("li");
+    }
+}
+
+class Link extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("link");
+    }
+}
+
+class Main extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("main");
+    }
+}
+
+class Meta extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("meta");
+    }
+}
+
+class Nav extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("nav");
+    }
+}
+
+class Ol extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("ol");
+    }
+}
+
+class P extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("p");
+    }
+}
+
+class Script extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("script");
+    }
+}
+
+class Search extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("search");
+    }
+}
+
+class Section extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("section");
+    }
+}
+
+class Span extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("span");
+    }
+}
+
+class Strong extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("strong");
+    }
+}
+
+class Style extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("style");
+    }
+}
+
+class Title extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("title");
+    }
+}
+
+class Ul extends RenderElement {
+    constructor(options: ElementOptions) {
+        super(options);
+    }
+
+    create(): HTMLElement {
+        return super.create("ul");
+    }
+}
 
 abstract class RenderElements {
     static A = A;

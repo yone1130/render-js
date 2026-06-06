@@ -1,17 +1,16 @@
-/**!
+/*!
  * 
- * render.js
+ * Render.js
  * 
  * Copyright (C) 2025 よね/Yone
- * 
  * Licensed under the MIT License.
  * 
- * https://github.com/yone1130/render.js
+ * https://github.com/yone1130/render-js
  * 
  */
 
 export interface ElementOptions {
-    id?: string;
+    id?: string | null;
     className?: string;
     href?: string | URL;
     src?: string | URL;
@@ -21,5 +20,4 @@ export interface ElementOptions {
     onClick?: (this: HTMLElement, ev: MouseEvent) => void;
     textContent?: string;
     children?: Array<HTMLElement>;
-    innerHTML?: string;
 }

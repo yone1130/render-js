@@ -1,12 +1,11 @@
-/**!
+/*!
  * 
- * render.js
+ * Render.js
  * 
  * Copyright (C) 2025 よね/Yone
- * 
  * Licensed under the MIT License.
  * 
- * https://github.com/yone1130/render.js
+ * https://github.com/yone1130/render-js
  * 
  */
 
@@ -20,14 +19,8 @@ export class RenderElement {
         this.options = options;
     }
 
-    _create(tagName: keyof HTMLElementTagNameMap): HTMLElement {
+    create(tagName: keyof HTMLElementTagNameMap): HTMLElement {
         this.element = document.createElement(tagName);
-
-        if (typeof this.options.innerHTML === "string") {
-            const html = document.createRange().createContextualFragment(this.options.innerHTML);
-            this.element.appendChild(html);
-            return this.element;
-        }
 
         if (typeof this.options.id === "string") {
             this.element.id = this.options.id;
@@ -72,7 +65,7 @@ export class RenderElement {
         return this.element;
     }
 
-    _createCustomElement(tagName: string): HTMLElement {
+    createCustomElement(tagName: string): HTMLElement {
         this.element = document.createElement(tagName);
 
         if (typeof this.options.id === "string") {

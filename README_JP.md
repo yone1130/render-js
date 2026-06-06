@@ -1,23 +1,35 @@
-# render.js
+# Render.js
 
-[![DeepWiki に質問する](https://deepwiki.com/badge.svg)](https://deepwiki.com/yone1130/render.js)
+[![DeepWiki に質問する](https://deepwiki.com/badge.svg)](https://deepwiki.com/yone1130/render-js)
 
-[> Read in English](./README.md)
+[Read in English >](./README.md)
 
-## Overview
+## 概要
 
-**render.js** は、TypeScript と JavaScript で利用できるHTMLレンダリングライブラリです。
+**Render.js** は、TypeScript / JavaScript 用のHTMLレンダリングライブラリです。
 
 ## 利用方法
 
-コード例 (App Creator):
-```js
-import { Render, RenderApp, RenderComponent } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
+### 1. インストールまたはインポート
 
+パッケージとしてインストール (TypeScript):
+```bash
+npm i yone1130/render-js
+```
+
+またはCDNから直接インポート (JavaScript):
+```js
+import { Render, RenderApp, RenderComponent } from "https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/render.js";
+```
+
+### 2. 使う
+
+サンプルコード (App Creator):
+```js
 class Greeting extends RenderComponent {
     constructor() {
         super();
-        this.title = "render.js";
+        this.title = "Render.js";
         this.message = "Hello World";
     }
 
@@ -61,24 +73,23 @@ render.runApp({
 
 またはレンダリングのみ (Builder):
 ```js
-import { Render } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
-
 const render = new Render();
 const root = document.getElementById("root");
 
-function app() {
-    const title = "render.js";
+const app = () => {
+    const { $div, $h1, $p } = render;
+    const title = "Render.js";
     const message = "Hello World";
 
     return [
-        render.$div({
+        $div({
             id: "app",
             children: [
-                render.$h1({
+                $h1({
                     id: "title",
                     textContent: title,
                 }),
-                render.$p({
+                $p({
                     id: "message",
                     textContent: message,
                 }),
@@ -107,7 +118,7 @@ render.build({
 ### 1. パッケージをインストールする
 
 ```bash
-npm install
+pnpm i
 ```
 
 ### 2. ビルド
@@ -115,7 +126,7 @@ npm install
 JavaScript にコンパイルします。
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 コンパイルされたJavaScriptファイルが `dist/` ディレクトリに出力されます。
@@ -124,4 +135,4 @@ npm run build
 
 [MIT License](./LICENSE) のもとでライセンスされます。
 
-Copyright &copy; 2025 よね/Yone
+Copyright © 2025 よね/Yone

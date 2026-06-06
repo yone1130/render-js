@@ -1,30 +1,29 @@
-/**!
+/*!
  * 
- * render.js
+ * Render.js
  * 
  * Copyright (C) 2025 よね/Yone
- * 
  * Licensed under the MIT License.
  * 
- * https://github.com/yone1130/render.js
+ * https://github.com/yone1130/render-js
  * 
  */
 
-import { Render } from 'https://cdn.yoneyo.com/scripts/render@1.0.0/render.js';
+import { Render } from "https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/render.js";
 
 const render = new Render();
 
 export function examples() {
+    const { $div } = render;
+
     return [
-        render.$div({
+        $div({
             id: "page",
             className: "page",
             children: app(),
         }),
     ];
 }
-
-/* ---------------- */
 
 class Navigation {
     constructor({ router, body }) {
@@ -41,7 +40,7 @@ class Navigation {
             children: [
                 this._router(),
                 this._body(),
-            ]
+            ],
         });
     }
 
@@ -68,7 +67,7 @@ class Navigation {
         return render.$div({
             className: "navigation__router",
             children: tabs,
-        })
+        });
     }
 
 
@@ -157,62 +156,62 @@ function app() {
     });
 
     return [
-        navigation.build()
+        navigation.build(),
     ];
 }
 
-/* ---------------- */
-
 function home() {
-    return render.$div({
+    const { $div, $h1, $h2, $span } = render;
+
+    return $div({
         id: "home",
         children: [
-            render.$h1({
+            $h1({
                 textContent: "Examples",
             }),
-            render.$h2({
+            $h2({
                 textContent: "Home",
             }),
-            render.$span({
-                textContent: "Welcome to render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Coming soon.",
+            $span({
+                textContent: "Welcome to Render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Coming soon.",
             }),
         ],
     });
 }
-
-/* ---------------- */
 
 function demos() {
-    return render.$div({
+    const { $div, $h1, $h2, $span } = render;
+
+    return $div({
         id: "demos",
         children: [
-            render.$h1({
+            $h1({
                 textContent: "Examples",
             }),
-            render.$h2({
+            $h2({
                 textContent: "Demos",
             }),
-            render.$span({
-                textContent: "Welcome to render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Coming soon.",
+            $span({
+                textContent: "Welcome to Render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Coming soon.",
             }),
         ],
     });
 }
 
-/* ---------------- */
-
 function menu() {
-    return render.$div({
+    const { $div, $h1, $h2, $span } = render;
+
+    return $div({
         id: "menu",
         children: [
-            render.$h1({
+            $h1({
                 textContent: "Examples",
             }),
-            render.$h2({
+            $h2({
                 textContent: "Menu",
             }),
-            render.$span({
-                textContent: "Welcome to render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Coming soon.",
+            $span({
+                textContent: "Welcome to Render.js examples!\nThis is a screen navigation and its bar demo!\n\nIn preparation, Coming soon.",
             }),
         ],
     });
