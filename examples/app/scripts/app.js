@@ -27,7 +27,7 @@ class Greeting extends RenderComponent {
             id: "greeting",
         });
 
-        this.#title = "render.js";
+        this.#title = "Render.js";
         this.#message = "Hello World! with App Creator.";
     }
 

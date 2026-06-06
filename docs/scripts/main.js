@@ -40,7 +40,7 @@ async function page() {
 
 function top() {
     const { $div, $section, $h1, $p, $a } = render;
-    let title = "render.js";
+    let title = "Render.js";
 
     return [
         $div({
@@ -58,7 +58,7 @@ function top() {
                         $p({
                             id: "about",
                             className: "about",
-                            textContent: "Welcome to render.js Documents!\nreder.js is a library of rendering HTML elements for JavaScript.",
+                            textContent: "Welcome to Render.js Documents!\nRender.js is a library of rendering HTML elements for JavaScript.",
                         }),
                     ],
                 }),

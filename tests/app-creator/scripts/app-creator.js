@@ -53,8 +53,8 @@ class TestAppCreator {
      * @returns {void}
      */
     #onFailedImportRender(error) {
-        root.textContent = "Error: Failed to import the render.js package. Please build the project first.";
-        throw new Error(`Error: Failed to import the render.js package. Please build the project first.: ${error}`);
+        root.textContent = "Error: Failed to import the Render.js package. Please build the project first.";
+        throw new Error(`Error: Failed to import the Render.js package. Please build the project first.: ${error}`);
     }
 }
 

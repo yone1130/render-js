@@ -44,7 +44,7 @@ const render = new Render();
 render.build({
     target: document.body,
     children: app({
-        title: "render.js",
+        title: "Render.js",
         message: "Hello World!",
     }),
 });

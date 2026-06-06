@@ -2,7 +2,7 @@
 
 ## About this Directory
 
-Example codes of **render.js**.
+Example codes of **Render.js**.
 
 ## See web demos
 
