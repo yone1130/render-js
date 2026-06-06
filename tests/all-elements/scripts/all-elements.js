@@ -92,7 +92,6 @@ function component() {
                 className: "test_class",
                 onClick: () => console.debug("Clicked Div."),
                 textContent: "[div]",
-                // innerHTML: "<span>[div-innerHTML]</span>",
                 children: [
                     render.$span({
                         textContent: "[div-children]",
@@ -103,14 +102,12 @@ function component() {
                 id: "test_id_span",
                 className: "test_class",
                 textContent: "[span]",
-                // innerHTML: "<span>[span-innerHTML]</span>",
             }),
             render.$section({
                 id: "test_setion",
                 className: "test_class",
                 onClick: () => console.debug("Clicked Section."),
                 textContent: "[section]",
-                // innerHTML: "<span>[section-innerHTML]</span>",
                 children: [
                     render.$span({
                         textContent: "[section-children]",
@@ -130,7 +127,6 @@ function component() {
                 className: "test_class",
                 onClick: () => console.debug("Clicked Button."),
                 textContent: "[button]",
-                // innerHTML: "<span>[button-innerHTML]</span>",
                 children: [
                     render.$span({
                         textContent: "[button-children]",
@@ -140,7 +136,6 @@ function component() {
             render.$nav({
                 id: "test_id_nav",
                 className: "test_class",
-                // innerHTML: "<span>[nav-innerHTML]</span>",
                 children: [
                     render.$span({
                         textContent: "[nav-children]",
@@ -150,7 +145,6 @@ function component() {
             render.$ul({
                 id: "test_id_ul",
                 className: "test_class",
-                // innerHTML: "<span>[ul-innerHTML]</span>",
                 children: [
                     render.$span({
                         textContent: "[ul-children]",
@@ -161,7 +155,6 @@ function component() {
                 id: "test_id_li",
                 className: "test_class",
                 textContent: "[li]",
-                // innerHTML: "<span>[li-innerHTML]</span>",
                 children: [
                     render.$span({
                         textContent: "[li-children]",
@@ -173,7 +166,6 @@ function component() {
                 className: "test_class",
                 onClick: () => console.debug("Clicked H1."),
                 textContent: "[h1]",
-                // innerHTML: "<span>[h1-innerHTML]</span>",
                 children: [
                     render.$span({
                         textContent: "[h1-children]",
@@ -185,7 +177,6 @@ function component() {
                 className: "test_class",
                 onClick: () => console.debug("Clicked P."),
                 textContent: "[p]",
-                // innerHTML: "<span>[p-innerHTML]</span>",
                 children: [
                     render.$span({
                         textContent: "[p-children]",
@@ -198,7 +189,6 @@ function component() {
                 href: "#",
                 onClick: () => console.debug("Clicked A."),
                 textContent: "[a]",
-                // innerHTML: "<span>[a-innerHTML]</span>",
                 children: [
                     render.$span({
                         textContent: "[a-children]",
